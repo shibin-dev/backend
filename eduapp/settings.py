@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-DATABASES["default"] = dj_database_url.parse(“<External Database URL>”)
+DATABASES["default"] = dj_database_url.parse("postgresql://backend_render_as1s_user:q24cWp986ASg1y8D8WDT0XUU4jLEEPPj@dpg-d0iudv95pdvs739sivh0-a.oregon-postgres.render.com/backend_render_as1s")
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
